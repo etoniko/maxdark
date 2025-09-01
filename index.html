@@ -1,0 +1,117 @@
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Беседы max</title>
+  <meta name="description" content="MAX — Беседы — стильная и приватная площадка для обсуждений. Анимация, интерактив и мгновенный переход в беседу." />
+  <meta name="keywords" content="MAX, беседы, чат, обсуждения, приватная беседа, maxdark, анимация, мобильная версия" />
+  <link rel="canonical" href="https://maxdark.ru/" />
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="MAX — Беседы" />
+  <meta property="og:title" content="MAX — Беседы | Присоединяйся в один клик" />
+  <meta property="og:description" content="Тёмная, живая и интерактивная площадка для приватных обсуждений." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://maxdark.ru/" />
+  <meta property="og:image" content="/assets/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MAX — Беседы" />
+  <meta name="twitter:description" content="Анимированный и отзывчивый интерфейс — мгновенный переход в беседу." />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"MAX Беседы","url":"https://maxdark.ru/"}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root{--accent:linear-gradient(90deg,#7c3aed,#06b6d4)}
+    html,body{height:100%}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; background-color:#0b0f14; color:#e6eef6; overflow-x:hidden;cursor: default;}
+
+    /* Animated background */
+    .bg-animated{background: radial-gradient(1200px 600px at 10% 10%, rgba(124,58,237,0.08), transparent 10%), radial-gradient(1000px 450px at 90% 85%, rgba(6,182,212,0.06), transparent 10%), linear-gradient(180deg,#05060a 0%, #0b0f14 100%); animation: floaty 18s ease-in-out infinite; background-attachment: fixed;}
+    @keyframes floaty{0%{background-position:0% 0%}50%{background-position:10% 12%}100%{background-position:0% 0%}}
+
+    .glass{backdrop-filter: blur(8px) saturate(1.2); background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)); border:1px solid rgba(255,255,255,0.05); transition: all 0.3s ease;}
+    .glass:hover{transform: translateY(-4px) scale(1.02)}
+
+    .btn-gradient{background:var(--accent); background-size:200% 200%; transition:all 0.4s ease;}
+    .btn-gradient:hover{background-position:100% 0%; transform:translateY(-3px) scale(1.02)}
+
+    .hero-title{transition:all 0.5s ease;}
+    .hero-title:hover{letter-spacing:1.5px; color:#7c3aed;}
+
+    @media (max-width:768px){.lg\:grid-cols-2{grid-template-columns:1fr} .hero-title{font-size:2rem;}} 
+    @media (max-width:420px){.hero-title{font-size:1.5rem}}
+
+    a:focus, button:focus{outline:3px solid rgba(124,58,237,0.3); outline-offset:2px}
+  </style>
+</head>
+<body class="min-h-screen bg-animated antialiased">
+<header class="max-w-6xl mx-auto p-6 flex items-center justify-between">
+  <div class="flex items-center gap-3">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center glass">
+      <span style="background:url(/assets/avatar.png);background-size:cover;font-weight:800; font-size:1.15rem; letter-spacing:0.6px"></span>
+    </div>
+    <div>
+      <div class="text-sm text-slate-300">MAX</div>
+      <div class="text-xs text-slate-500">Беседы — приватная площадка</div>
+    </div>
+  </div>
+  <nav class="hidden md:flex gap-4 items-center text-sm text-slate-300">
+    <a href="#features" class="hover:underline transition-all hover:text-cyan-400">Функции</a>
+    <a href="#about" class="hover:underline transition-all hover:text-cyan-400">О нас</a>
+    <a href="#faq" class="hover:underline transition-all hover:text-cyan-400">FAQ</a>
+    <a href="#" id="copyLink" class="px-3 py-2 rounded-md glass text-xs hover:scale-105 transition-all">Копировать ссылку</a>
+  </nav>
+</header>
+<main class="max-w-6xl mx-auto px-6 pb-12">
+  <section class="grid lg:grid-cols-2 gap-8 items-center mt-8">
+    <div class="p-8 rounded-2xl glass animate-fade-in">
+      <h1 class="hero-title text-4xl md:text-5xl font-extrabold leading-tight">MAX — Беседы<br><span class="text-slate-400 font-medium">Присоединяйся к приватной площадке</span></h1>
+      <p class="mt-4 text-slate-300">Тёмный дизайн, минимум шума — максимум смысла. Заходи, прочитай правила и перейди в беседу в один клик.</p>
+      <div class="mt-6 flex gap-3">
+        <a id="cta" class="btn-gradient inline-flex items-center gap-3 px-6 py-3 rounded-2xl font-semibold shadow-lg" href="#" role="button" aria-label="Перейти в беседу" target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M5 12h14" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M13 6l6 6-6 6" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+          Перейти в беседу
+        </a>
+        <button id="previewBtn" class="px-4 py-3 rounded-2xl glass text-sm hover:scale-105 transition-transform">Прочитать правила</button>
+      </div>
+    </div>
+    <div class="p-6 rounded-2xl glass animate-fade-in delay-200">
+      <div class="w-full h-64 rounded-xl overflow-hidden relative flex items-center justify-center bg-black/30 hover:scale-105 transition-transform">
+        <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); backdrop-filter: blur(6px);"></div>
+        <div class="text-center px-6 z-10">
+          <h3 class="text-2xl font-semibold">Почему заходят сюда</h3>
+          <p class="mt-3 text-slate-300">Короткие правила, тёмный стиль, удобный переход — всё для быстрой вовлечённости.</p>
+          <ul class="mt-4 text-sm text-slate-400 space-y-2 text-left">
+            <li>• Чёткие правила и быстрый доступ</li>
+            <li>• Никакой рекламы — только беседа</li>
+            <li>• Современный минималистичный интерфейс</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="mt-12 text-center text-sm text-slate-500 animate-fade-in">© <span id="year"></span> MAX — Беседы. Все права защищены.</footer>
+</main>
+<script>
+const CONVERSATION_URL = 'https://max.ru/join/tY7RsCI4Oa52BJy_GvOmRnct_PueKugIQX13KzsKxt0';
+document.getElementById('cta').href = CONVERSATION_URL;
+document.getElementById('copyLink').addEventListener('click', async (e) => { e.preventDefault(); try{ await navigator.clipboard.writeText(CONVERSATION_URL); document.getElementById('copyLink').textContent = 'Ссылка скопирована'; setTimeout(()=> document.getElementById('copyLink').textContent = 'Копировать ссылку', 2500);}catch(err){alert('Не удалось скопировать ссылку');}});
+document.getElementById('previewBtn').addEventListener('click', ()=>{alert('Правила:\n1) Не флудить\n2) Уважать участников\n3) Запрещена реклама');});
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('cta').addEventListener('keydown', (e)=>{if(e.key==='Enter') window.open(CONVERSATION_URL, '_blank');});
+</script>
+<style>@keyframes fade-in{0%{opacity:0;transform:translateY(20px);}100%{opacity:1;transform:translateY(0);}}.animate-fade-in{animation:fade-in 0.8s ease forwards;}.animate-fade-in.delay-200{animation-delay:0.2s;}</style>
+</body>
+</html>
